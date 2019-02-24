@@ -56,7 +56,7 @@ new_cart = consolidate_cart(cart)
 coupon_cart = apply_coupons(new_cart, coupons)
 final_cart = apply_clearance(coupon_cart)
   final_cart.each do |item_name, properties|
-    total = properties[:price]*properties[:count]
+    total += properties[:price]*properties[:count]
   end
        if total > 100 
        total = total - (total*0.10)
