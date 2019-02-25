@@ -63,29 +63,3 @@ final_cart = apply_clearance(coupon_cart)
        end
  total
  end
-  
-  
-  
-  
-  
-#   deal.each do |food, coupon|
- 
-    
-#         if values[:count] == 1
-#           total = coupon[:price]
-#         else total = clearance[:price]
-
-#         if values[:count] > 1
-#           remainder = values[:count] - deal[:num]
-#           total = (coupon[:price]) + (remainder*values[:price])
-#           #35.5 = 20(2 sale beer) + 13(1 remainder beer) + 2.5 (1 reg price beet)
-#         end 
-#         end
-#   end
-#   end
-#         if total > 100 
-#         total = total - (total*0.10)
-#         end
-       
-# total
-# end
