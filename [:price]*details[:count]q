@@ -1,0 +1,30 @@
+
+[1mFrom:[0m /home/peaceful-thread-2438/green_grocer-nyc-web-career-031119/grocer.rb @ line 84 Object#checkout:
+
+    [1;34m63[0m: [32mdef[0m [1;34mcheckout[0m(cart, coupons)
+    [1;34m64[0m:   [1;34m# code here[0m
+    [1;34m65[0m:   total = [1;34m0[0m
+    [1;34m66[0m:   new_cart = consolidate_cart(cart)
+    [1;34m67[0m:   deals = apply_coupons(new_cart, coupons)
+    [1;34m68[0m:   clearance = apply_clearance(new_cart)
+    [1;34m69[0m: 
+    [1;34m70[0m:   new_cart.each [32mdo[0m |food, details|
+    [1;34m71[0m:    clearance.each [32mdo[0m |item, facts|
+    [1;34m72[0m:      
+    [1;34m73[0m:   [32mif[0m cart.length == [1;34m1[0m 
+    [1;34m74[0m:    total = total + details[[33m:price[0m]
+    [1;34m75[0m:   [32melsif[0m cart.length > [1;34m1[0m && details[[33m:count[0m] >=[1;34m1[0m
+    [1;34m76[0m:     total += (details[[33m:price[0m]*details[[33m:count[0m])
+    [1;34m77[0m:   [32melse[0m cart.length >=[1;34m1[0m
+    [1;34m78[0m:     total += (facts[[33m:price[0m]*details[[33m:count[0m])
+    [1;34m79[0m:   [32mend[0m
+    [1;34m80[0m:   
+    [1;34m81[0m:   [32mif[0m total > [1;34m100[0m 
+    [1;34m82[0m:     total = total - (total*[1;35m0.10[0m)
+    [1;34m83[0m:   [32mend[0m 
+ => [1;34m84[0m:   binding.pry
+    [1;34m85[0m: [32mend[0m 
+    [1;34m86[0m: [32mend[0m
+    [1;34m87[0m: [32mreturn[0m total
+    [1;34m88[0m: [32mend[0m
+
